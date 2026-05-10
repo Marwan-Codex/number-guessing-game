@@ -67,7 +67,7 @@
   position: relative;
   background-color: #D32F2F;
   min-height: 100%;
-  color: black;
+  color: white;
 }
 
 .main {
@@ -352,7 +352,7 @@
 }
 
 .copyright_para {
-  color: grey;
+  color: black;
 }
 
 @media (max-width: 390px) {
