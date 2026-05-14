@@ -2,7 +2,7 @@
 import { JSX, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { game_range, game_attempts } from "../page";
-import { parent_variants, item_variants, MotionLink } from "../../exports";
+import { parentVariants, itemVariants, MotionLink } from "../../exports";
 import styles from "./page.module.css";
 
 const random_num: number = Math.floor(Math.random() * game_range);
@@ -80,42 +80,42 @@ export default function FreeGame(): JSX.Element {
         });
     }, []);
     return (
-        <motion.div className={styles.page} variants={parent_variants} initial="hidden" animate="visible">
+        <motion.div className={styles.page} variants={parentVariants} initial="hidden" animate="visible">
             <MotionLink 
                 href={"../"} 
                 className={styles.exit_btn} 
                 ref={exit_btn}
-                variants={item_variants}
+                variants={itemVariants}
             >Exit</MotionLink>
             <MotionLink 
                 href={"../free-mode"} 
                 className={styles.back_btn}
-                variants={item_variants}
+                variants={itemVariants}
             >Back</MotionLink>
-            <motion.aside className={styles.result_box} variants={item_variants}>
-                <motion.span className={styles.result_txt_win} variants={item_variants}> Wins: {wins} </motion.span>
-                <motion.span className={styles.result_txt_lose} variants={item_variants}> Loses: {loses} </motion.span>
+            <motion.aside className={styles.result_box} variants={itemVariants}>
+                <motion.span className={styles.result_txt_win} variants={itemVariants}> Wins: {wins} </motion.span>
+                <motion.span className={styles.result_txt_lose} variants={itemVariants}> Loses: {loses} </motion.span>
             </motion.aside>
-            <motion.main className={styles.main} variants={item_variants}>
+            <motion.main className={styles.main} variants={itemVariants}>
                 <motion.h1 
                     className={
                         player_status != "Win." && player_status != "Lose." 
                         ? styles.main_title 
                         : styles.none
                     }
-                    variants={item_variants}
+                    variants={itemVariants}
                 >Free Game Mode</motion.h1>
-                <motion.div className={styles.game_box} variants={item_variants}>
-                    <motion.div className={player_status != "Win." && player_status != "Lose." ? styles.info_box : styles.none} variants={item_variants}>
-                        <motion.h2 variants={item_variants}>Rules</motion.h2>
-                        <motion.p className={styles.rules_p} variants={item_variants}>
+                <motion.div className={styles.game_box} variants={itemVariants}>
+                    <motion.div className={player_status != "Win." && player_status != "Lose." ? styles.info_box : styles.none} variants={itemVariants}>
+                        <motion.h2 variants={itemVariants}>Rules</motion.h2>
+                        <motion.p className={styles.rules_p} variants={itemVariants}>
                             You Should Guess The Number in
                             <p className={styles.bold}> range (0 - {game_range - 1}) </p>
                             You Have <span className={`${styles.bold} ${styles.italic}`}> {game_attempts} Attempts Only.</span>
                         </motion.p>
-                        <motion.span className={styles.bold} variants={item_variants}> Left: {counter} </motion.span>
+                        <motion.span className={styles.bold} variants={itemVariants}> Left: {counter} </motion.span>
                     </motion.div>
-                    <motion.div className={player_status != "Win." && player_status != "Lose." ? styles.inp_box : styles.none} variants={item_variants}>
+                    <motion.div className={player_status != "Win." && player_status != "Lose." ? styles.inp_box : styles.none} variants={itemVariants}>
                         <motion.input 
                             type="text" 
                             className={styles.inp} 
@@ -124,16 +124,16 @@ export default function FreeGame(): JSX.Element {
                             inputMode="numeric"
                             pattern="[0-9]*"
                             ref={inp}
-                            variants={item_variants}
+                            variants={itemVariants}
                         />
-                        <motion.button onClick={handle_click} className={styles.submit_btn} ref={sub_btn} variants={item_variants}>Submit</motion.button>
+                        <motion.button onClick={handle_click} className={styles.submit_btn} ref={sub_btn} variants={itemVariants}>Submit</motion.button>
                     </motion.div>
                     <motion.div 
                         className={player_status == "Win." || player_status == "Lose." ? `${styles.status_box} ${styles.rem_5} ${styles.pointer}` 
                             : player_status.length != 0 ? styles.status_box 
                             : styles.none} 
                         onClick={player_status == "Win." || player_status == "Lose." ? handle_again : (): void => {}}
-                        variants={item_variants}
+                        variants={itemVariants}
                     >
                         <motion.p 
                             key={
@@ -146,14 +146,14 @@ export default function FreeGame(): JSX.Element {
                                 ? styles.status_txt 
                                 : styles.none
                             }
-                            variants={item_variants}
+                            variants={itemVariants}
                         >{player_status}</motion.p>
-                        <motion.p className={player_status == "Lose." ? styles.bold : styles.none} variants={item_variants}>It&apos;s {num}</motion.p>
+                        <motion.p className={player_status == "Lose." ? styles.bold : styles.none} variants={itemVariants}>It&apos;s {num}</motion.p>
                     </motion.div>
                 </motion.div>
             </motion.main>
-            <motion.footer className={styles.footer} variants={item_variants}>
-                <motion.p className={styles.copyright_para} variants={item_variants}>&copy; 2026 - {new Date().getFullYear()} Marwan Void</motion.p>
+            <motion.footer className={styles.footer} variants={itemVariants}>
+                <motion.p className={styles.copyright_para} variants={itemVariants}>&copy; 2026 - {new Date().getFullYear()} Marwan Void</motion.p>
             </motion.footer>
         </motion.div>
     );
