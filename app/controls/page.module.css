@@ -187,6 +187,33 @@
   padding: 10px;
 }
 
+.list_before_div {
+  counter-reset: list-count;
+}
+.list_before_div .doc_info {
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid white;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.list_before_div .doc_info::before {
+  counter-increment: list-count;
+  content: counter(list-count);
+  display: inline-flex;
+  margin: 0 5px 5px 0;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.news_link {
+  color: green;
+  text-decoration: underline;
+}
+
 .footer {
   position: absolute;
   bottom: 0;

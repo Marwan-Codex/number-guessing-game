@@ -3,7 +3,17 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export const MotionLink = motion(Link);
-export const parent_variants: {
+export const MotionDiv = motion.div;
+export const MotionSection = motion.section;
+export const MotionMain = motion.main;
+export const MotionP = motion.p;
+export const MotionSpan = motion.span;
+export const MotionH1 = motion.h1;
+export const MotionH6 = motion.h6;
+export const MotionFooter = motion.footer;
+export const MotionA = motion.a;
+
+export const parentVariants: {
   hidden: {
     opacity: number,
   },
@@ -22,7 +32,7 @@ export const parent_variants: {
     },
   },
 };
-export const item_variants: {
+export const itemVariants: {
   hidden: {
     opacity: number,
     y: number,

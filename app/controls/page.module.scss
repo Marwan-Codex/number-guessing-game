@@ -86,6 +86,29 @@
     padding: 10px;
 }
 
+.list_before_div {
+    counter-reset: list-count;
+    & .doc_info {
+        padding: 10px;
+        margin: 5px;
+        border: 2px solid white;
+        @include border-radius();
+        &::before {
+            counter-increment: list-count;
+            content: counter(list-count);
+            display: inline-flex;
+            margin: 0 5px 5px 0;
+            padding: 5px;
+            font-weight: bold;
+        }
+    }
+}
+
+.news_link {
+    color: green;
+    text-decoration: underline;
+}
+
 .footer {
     position: absolute;
     bottom: 0;

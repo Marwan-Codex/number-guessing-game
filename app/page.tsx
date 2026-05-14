@@ -2,7 +2,7 @@
 import { JSX, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./page.module.css";
-import { parent_variants, item_variants } from "./exports";
+import { parentVariants, itemVariants } from "./exports";
 import Link from "next/link";
 
 class Level {
@@ -195,9 +195,9 @@ export default function Home(): JSX.Element {
           </div>
         </div>
       </main>
-      <motion.footer className={styles.footer} variants={parent_variants} initial="hidden" animate="visible">
+      <motion.footer className={styles.footer} variants={parentVariants} initial="hidden" animate="visible">
         <motion.p 
-          className={styles.copyright_para} variants={item_variants}
+          className={styles.copyright_para} variants={itemVariants}
         >&copy; 2026 - {new Date().getFullYear()} Marwan Void</motion.p>
       </motion.footer>
     </div>
