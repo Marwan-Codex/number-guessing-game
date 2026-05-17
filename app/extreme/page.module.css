@@ -22,6 +22,20 @@
   font-style: italic;
 }
 
+.red {
+  color: red;
+}
+.red::-moz-selection {
+  color: red !important;
+}
+.red::selection {
+  color: red !important;
+}
+
+.red_border {
+  border-color: red !important;
+}
+
 @keyframes to-top {
   from {
     transform: translateY(800px);

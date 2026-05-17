@@ -49,6 +49,17 @@
     font-style: italic;
 }
 
+.red {
+    color: red;
+    &::selection {
+        color: red !important;
+    }
+}
+
+.red_border {
+    border-color: red !important;
+}
+
 @keyframes to-top {
     from {
         @include translate-y(800px);

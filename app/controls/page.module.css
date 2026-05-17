@@ -8,7 +8,7 @@
   color: black;
 }
 
-.footer {
+.flex_center, .footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +20,20 @@
 
 .italic {
   font-style: italic;
+}
+
+.red {
+  color: red;
+}
+.red::-moz-selection {
+  color: red !important;
+}
+.red::selection {
+  color: red !important;
+}
+
+.red_border {
+  border-color: red !important;
 }
 
 @keyframes to-top {
@@ -212,6 +226,72 @@
 .news_link {
   color: green;
   text-decoration: underline;
+}
+
+.danger_btn {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+  transition: 0.7s ease;
+  -webkit-transition: 0.7s ease;
+  -moz-transition: 0.7s ease;
+  -ms-transition: 0.7s ease;
+  -o-transition: 0.7s ease;
+}
+.danger_btn:hover {
+  opacity: 0.8;
+}
+
+.dialog {
+  margin: auto;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding: 10px;
+}
+.dialog *::-moz-selection {
+  background-color: black;
+  color: white;
+}
+.dialog *::selection {
+  background-color: black;
+  color: white;
+}
+
+.flex_center {
+  gap: 10px;
+  flex-direction: column;
+}
+
+.dialog_btn {
+  display: inline-block;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding: 10px;
+}
+
+.yes {
+  color: white;
+  background-color: red;
 }
 
 .footer {
