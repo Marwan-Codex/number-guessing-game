@@ -5,6 +5,7 @@ import Link from "next/link";
 export const MotionLink = motion(Link);
 export const MotionDiv = motion.div;
 export const MotionSection = motion.section;
+export const MotionArticle = motion.article;
 export const MotionMain = motion.main;
 export const MotionP = motion.p;
 export const MotionSpan = motion.span;
@@ -12,6 +13,7 @@ export const MotionH1 = motion.h1;
 export const MotionH6 = motion.h6;
 export const MotionFooter = motion.footer;
 export const MotionA = motion.a;
+export const MotionBtn = motion.button;
 
 export const parentVariants: {
   hidden: {

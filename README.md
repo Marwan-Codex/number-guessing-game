@@ -3,7 +3,7 @@
 System Chooses a Random Number and You Should Guess That Number.
 
 ## New Updates:
-#### Adding News Feed To Controls Page
+#### Adding Dangers Zone and Delete All Scores Button In That Zone
 
 ## Used Tech:
 1. React + TSX + Next.js

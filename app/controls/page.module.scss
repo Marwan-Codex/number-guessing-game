@@ -109,6 +109,53 @@
     text-decoration: underline;
 }
 
+.danger_btn {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    border: 2px solid white;
+    @include border-radius();
+    width: 100%;
+    padding: 20px;
+    font-weight: bold;
+    @include transition();
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.dialog {
+    margin: auto;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    @include border-radius();
+    padding: 10px;
+    & *::selection {
+        background-color: black;
+        color: white;
+    }
+}
+
+.flex_center {
+    @extend %flex_center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.dialog_btn {
+    display: inline-block;
+    width: 100%;
+    border: 2px solid black;
+    @include border-radius();
+    padding: 10px;
+}
+
+.yes {
+    color: white;
+    background-color: red;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
